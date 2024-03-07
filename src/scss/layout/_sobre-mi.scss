@@ -1,0 +1,626 @@
+.contenedor-section-sobremi {
+    background-color: darken($blanco, 5);
+    padding: 5rem 0;
+    scroll-margin-top: 6rem;
+    @include tabletXL {
+        scroll-margin-top: 8rem;
+    }
+    .contenedor-sobremi {
+        padding: 5rem 0;
+        h2 {
+            font-weight: 500;
+        }
+        .sobremi-grid {
+            @include tablet {
+                @include grid(2, 4rem);
+                grid-template-columns: 1.5fr 1fr;
+            }
+
+            .columnas {
+                // Col-1
+                .fijado-contenedor {
+                    display: none;
+                    z-index: 10000;
+                    background-color: rgba(0, 0, 0, 0.918);
+                    position: fixed;
+                    width: 100%;
+                    height: 100%;
+                    margin: auto;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    .perfil-fijado2 {
+                        opacity: 0;
+                        transform: scale(0);
+                        transition: opacity 0.3s ease-in-out, transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                        position: fixed;
+                        max-width: 50rem;
+                        max-height: 50rem;
+                        margin: auto;
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+                        left: 0;
+                        display: flex;   
+                        justify-content: center;
+                        align-items: center;
+                        .perfil-contenedor2 {
+                            background-color: white;
+                            border-radius: 2rem;
+                            padding: 1rem;
+                            width: 95%;
+                            .contenedor-equis {
+                                display: flex;
+                                justify-content: flex-end;
+                                .equis{
+                                    text-align: center;
+                                    width: 2.5rem;
+                                    height: 2.5rem;
+                                    transition: .1s ease all;
+                                    &:hover{
+                                        cursor: pointer;
+                                    }
+                                        
+                                }
+                            }
+                            .perfil2 {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                padding: 0 5rem 1.5rem 5rem;
+                                .contenedor-imagen-perfil2 {
+                                    position: relative;
+                                    background-color: darken(#0bb6b5, 10);
+                                    overflow: hidden;
+                                    height: 25rem;
+                                    width: 25rem;
+                                    box-shadow: 0 0 10px 5px #036868;
+                                    border-radius: 50%;
+                                    margin-bottom: 1rem;
+                                    img {
+                                        object-fit: cover;
+                                        filter: drop-shadow(10px -5px 10px #000) contrast(110%);
+                                        height: 28rem;
+                                    }
+                                }
+                                .perfil-nombre2 {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    h5 {
+                                        margin: 0;
+                                        font-size: 1.3rem;
+                                    }
+                                    p {
+                                        font-size: 1rem;
+                                    }
+                                    span {
+                                        font-size: 1.3rem;
+                                        font-weight: bold;
+                                    }
+                                }
+                            }
+                            .contacto-fijado {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                .contenedor-freelance {
+                                    .disponible {
+                                        color: rgb(119, 197, 1);
+                                        animation: agrandar2 2s infinite;
+                                        position: relative;
+                                    }
+                                    //  efecto movimiento letras
+                                    @keyframes agrandar2 {
+                                        0% {
+                                          transform: scale(1);
+                                          color: darken(rgb(119, 197, 1), 10);
+                                        }
+                                        50% {
+                                          transform: scale(1.05);
+                                          color: rgb(119, 197, 1);
+                                        }
+                                        100% {
+                                          transform: scale(1);
+                                          color: darken(rgb(119, 197, 1), 10);
+                                        }
+                                      }
+                        
+                                    .text {
+                                        line-height: 1.2;
+                                        font-weight: 700;
+                                        font-size: 2.5rem;
+
+                                    }
+                                } 
+                                .tecnologias-fijado {
+                                    ul {
+                                        display: flex;
+                                        li {
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            border-radius: 100%;
+                                            border: 1px solid $gris;
+                                            width: 5rem;
+                                            height: 5rem;
+                                            transition: all .2s ease-in-out;
+                                                &:hover {
+                                                    transform: scale(1.1);
+                                                }
+                                            img {
+                                                width: 3rem;
+                                            }
+                                            p {
+                                                color: lighten($secundario, 10);
+                                                cursor: default;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .perfil-contenedor {
+                    padding: 3rem;
+                    &:hover {
+                        cursor: zoom-in;
+                    }
+                    .perfil {
+                        display: flex;
+                        align-items: center;
+                        padding-bottom: 1.5rem;
+                        .contenedor-imagen-perfil {
+                            min-width: 8rem;
+                            max-width: 8rem;
+                            margin: 0;
+                            position: relative;
+                            border-radius: 100%;
+                            box-shadow: 0 0 10px 2px #036868;
+                            background-color: #088685;
+                            .disponible {
+                                display: flex;
+                                height: 2rem;
+                                width: 2rem;
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                .disponible-animacion {
+                                    position: absolute;
+                                    animation: ping 1.5s cubic-bezier(0,0,.2,1) infinite;
+                                    background-color: rgb(163 230 53 / 0.5);
+                                    width: 2rem;
+                                    height: 2rem;
+                                    border-radius: 100%;
+                                }
+                                .disponible-circulo {
+                                    background-color: #4FEC17;
+                                    border-radius: 100%;
+                                    height: 1.5rem;
+                                    width: 1.5rem;
+                                }
+                                @keyframes ping {
+                                    75%, 100% {
+                                        transform: scale(2);
+                                        opacity: 0;
+                                    }
+                                }
+                            }
+                        }
+                        
+                        .perfil-nombre {
+                            padding-left: 2rem;
+                            h5 {
+                                margin: 0;
+                                font-size: 1.3rem;
+                            }
+                            p {
+                                font-size: 1.1rem;
+                            }
+                        }
+                    }
+                    .perfil-descripcion {
+                        font-size: 1.2rem;
+                        color: rgb(122, 122, 122);
+                        span {
+                            color: black ;
+                        }
+                    }
+                }
+
+                .proyectos-contenedor {
+                    ul {
+                        padding: 0;
+                        margin: 0;
+                        .proyectos-titulo {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding-top: .5rem;
+                            padding-bottom: .5rem;
+                            .izquierda {
+                                display: flex;
+                                align-items: center;
+                                .proyectos-num {
+                                    width: 3rem;
+                                    height: 3rem;
+                                    border-radius: 100%;
+                                    text-align: center;
+                                    font-size: 1.3rem;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    border: .1rem solid darken($principal, 15);
+                                    color: darken($principal, 15);
+                                }
+                                h5 {
+                                    padding-left: 1rem;
+                                }
+                            }
+                            .derecha {
+                                cursor: pointer;
+                                margin-right: 1rem;
+                                transition: all .3s ease-in-out;
+                            }
+                            .giro {
+                                transform: rotate(180deg);
+                            }
+                        }
+                        .descripcion-proyectos {
+                            opacity: 0;
+                            visibility: hidden;
+                            height: 0;
+                            overflow: hidden;
+                            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out, height 0.5s ease-in-out;
+                        
+                            // Cuando la clase .ocultar no esté presente, cambia la opacidad y la visibilidad
+                            &:not(.ocultar) {
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                            .proyectos-li {
+                                padding-top: 2rem;
+                                padding-bottom: 2rem;
+                                .descripcion-titulo {
+                                    display: flex;
+                                    align-items: center;
+                                    margin: 1rem 0;
+                                    i {
+                                        padding-right: 1rem;
+                                    }
+                                    h6 {
+                                        text-transform: uppercase;
+                                        margin: 0;
+                                    }
+                                }
+                                ul {
+                                    .descripcion-li {
+                                        display: flex;
+                                        align-items: center;
+                                        position: relative;
+                                        margin-left: 2rem;
+                                        font-size: 1.1rem;
+                                        color: rgb(124, 124, 124);
+                                        span {
+                                            color: black;
+                                        }
+                                        a {
+                                            font-weight: bold;
+                                            
+                                        }
+                                        &:first-child {
+                                            &::before {
+                                                content:'';
+                                                position: absolute;
+                                                width: .1rem;
+                                                height: 100%;
+                                                background-color: blue;
+                                                left: -1.2rem;
+                                                top: 1.21rem;
+                                            }
+                                            &::after {
+                                                content:'';
+                                                position: absolute;
+                                                width: .5rem;
+                                                height: .5rem;
+                                                background-color: blue;
+                                                border-radius: 100%;
+                                                left: -1.4rem;
+                                                top: .7rem;
+                                            }
+                                        }
+                                        &:nth-child(2) {
+                                            &::after {
+                                                content:'';
+                                                position: absolute;
+                                                width: .5rem;
+                                                height: .5rem;
+                                                background-color: blue;
+                                                border-radius: 100%;
+                                                left: -1.4rem;
+                                                top: 1.2rem;
+                                            }
+                                        }
+                                        .proyecto-tecnologias {
+                                            @include grid(6, 1rem);
+                                            align-items: center;
+                                            padding-left: 1rem;
+                                            gap: 0;
+                                            @include telefono {
+                                                @include grid(6, 1rem);
+                                            }
+                                            img {
+                                                width: 3rem;
+                                                @include tablet {
+                                                    opacity: .5;
+                                                    &:hover {
+                                                        opacity: 1;
+                                                    }
+                                                }
+                                            }
+                                        }
+    
+                                    }
+                                    .descripcion-li2 {
+                                        display: flex;
+                                        align-items: center;
+                                        position: relative;
+                                        margin-left: 2rem;
+                                        font-size: 1.1rem;
+                                        color: rgb(124, 124, 124);
+                                        span {
+                                            color: black;
+                                        }
+                                        a {
+                                            font-weight: bold;
+                                        }
+                                        &:first-child {
+                                            &::before {
+                                                content:'';
+                                                position: absolute;
+                                                width: .1rem;
+                                                height: 100%;
+                                                background-color: blue;
+                                                left: -1.2rem;
+                                                top: 1.21rem;
+                                            }
+                                            &::after {
+                                                content:'';
+                                                position: absolute;
+                                                width: .5rem;
+                                                height: .5rem;
+                                                background-color: blue;
+                                                border-radius: 100%;
+                                                left: -1.4rem;
+                                                top: .7rem;
+                                            }
+                                        }
+                                        &:nth-child(2) {
+                                            &::after {
+                                                content:'';
+                                                position: absolute;
+                                                width: .5rem;
+                                                height: .5rem;
+                                                background-color: blue;
+                                                border-radius: 100%;
+                                                left: -1.4rem;
+                                                top: .8rem;
+                                            }
+                                        }
+                                        .proyecto-tecnologias {
+                                            @include grid(6, 1rem);
+                                            align-items: center;
+                                            padding-left: 1rem;
+                                            img {
+                                                width: 3rem;
+                                                @include tablet {
+                                                    opacity: .5;
+                                                    &:hover {
+                                                        opacity: 1;
+                                                    }
+                                                }
+                                            }
+                                        }
+    
+                                    }
+                                }
+                            }
+                            .proyectos-derecha {
+                                padding-bottom: 2rem;
+
+                                img {
+                                    border-radius: 2rem;
+                                    width: 100%;
+                                    height: 18rem;
+                                    object-fit: cover;
+                                    opacity: 1;
+                                    transition: all .5s ease;
+
+                                    &:hover {
+                                        cursor: pointer;
+                                        opacity: .5;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                // Col-2
+                .tecnologias-contenedor {
+                    ul {
+                        padding: 2rem;
+                        @include grid(3,2rem);
+                        justify-items: center;
+                        @include telefono {
+                            @include grid(5,3rem);
+                        }
+                        @include tablet {
+                            @include grid(3,3rem);
+                        }
+                        @include desktop {
+                            @include grid(4,3rem);
+                        }
+                        li {
+                            display: flex;
+                            justify-content: center;
+                            border-radius: 100%;
+                            border: 2px solid lighten($gris, 4);
+                            width: 6rem;
+                            height: 6rem;
+                            transition: all .2s ease-in-out;
+                                &:hover {
+                                    transform: scale(1.1);
+                                }
+                            img {
+                                width: 4rem;
+                            }
+                        }
+                    }
+                }
+                .li-intereses {
+                    padding: 3rem;
+                    p {
+                        font-size: 1.2rem;
+                        color: rgb(122, 122, 122);
+                    }
+                    span {
+                        color: black;
+                    }
+                } 
+            }
+
+        }
+    }
+
+
+    .contenedores {
+        background-color: $blanco;
+        border: .1rem solid $gris;
+        border-radius: 1rem;
+    }
+
+    .subtitulos {
+        font-size: 1.3rem;
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+    }
+
+    .exp-listas {
+        border-bottom: .1rem solid $gris;
+        border-radius: 1rem;
+        padding: 0 3rem;
+    }
+
+    .ver-mas {
+        display: block;
+        background-color: $principal;
+        color: black;
+        padding: .7rem;
+        border-radius: 1rem;
+        margin-top: 1rem;
+        text-align: center;
+        cursor: pointer;
+        border: .1rem solid darken($principal, 7);
+        transition: all .3s ease-in-out;
+        &:hover {
+            transform: scale(.985);
+            background-color: darken($principal, 7);
+        }
+    }
+}
+
+/* Estilos básicos para la galería */
+.secondary-images {
+    display: none;
+  }
+  
+  .contenedor-img {
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+  
+  .contenedor-img img{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .project {
+    margin: 10px;
+  }
+  
+  .gallery-image {
+    width: 200px; /* Ajusta el tamaño según tus necesidades */
+    height: 150px;
+    cursor: pointer;
+  }
+  
+  /* Estilos para el modal */
+  .modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo negro con transparencia */
+    place-items: center;
+    z-index: 1000;
+
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+  }
+  
+  .close {
+    color: white;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  

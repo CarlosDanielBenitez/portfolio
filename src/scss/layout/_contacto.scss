@@ -1,0 +1,118 @@
+.section-contacto {
+    background-color: $secundario;
+    scroll-margin-top: 6rem;
+    @include tabletXL {
+        scroll-margin-top: 8rem;
+    }
+    .contenedor-contacto {
+        padding: 4rem 2rem;
+        @include tablet {
+            @include grid(2, 10rem);
+            grid-template-columns: 1.3fr 3fr;
+        }
+    }
+
+
+    .contacto-izquierda {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include tablet {
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .contenedor-freelance {
+            .freelance {
+                color: white;
+            }
+            .disponible {
+                color: rgb(119, 197, 1);
+                animation: agrandar 2s infinite;
+                position: relative;
+            }
+            //  efecto movimiento letras
+            @keyframes agrandar {
+                0% {
+                  transform: scale(1);
+                  color: darken(rgb(119, 197, 1), 20);
+                }
+                50% {
+                  transform: scale(1.05);
+                  color: rgb(119, 197, 1);
+                }
+                100% {
+                  transform: scale(1);
+                  color: darken(rgb(119, 197, 1), 20);
+                }
+              }
+
+            .text {
+                line-height: 1.2;
+                font-weight: 700;
+                font-size: 2.5rem;
+                @include tablet {
+                    font-size: 3rem;
+                }
+            }
+        }
+        .descripcion-contacto {
+            margin: 1rem 0;
+            color: rgb(163, 161, 161);
+            font-size: 1.2rem;
+            max-width: 30rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            @include tablet {
+                text-align: start;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .contacto-derecha {
+        h3 {
+            color: $principal;
+            font-weight: 700;
+            font-size: 3rem;
+            padding-bottom: 2rem;
+            line-height: 1.3;
+            span {
+                font-size: 1.3rem;
+                color: darken($principal, 20);
+            }
+            @include tablet {
+                font-size: 4rem;
+            }
+        }
+        ul {
+            margin: 0;
+            @include grid(3, 1rem);
+            @include tablet {
+                @include grid(3, 5rem);
+            }
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $principal;
+                font-size: 1.3rem;
+                cursor: pointer;
+                transition: all .5s ease-in-out;
+                border: .2rem solid $principal;
+                height: 4rem;
+                border-radius: 2rem;
+                opacity: .5;
+                i {
+                    padding-right: .5rem;
+                    font-size: 2rem;
+                }
+                
+                &:hover {
+                    opacity: 1;
+                    transform: scale(1.05);
+                    border: .2rem solid $principal;
+                }
+            }
+        }
+    }
+}

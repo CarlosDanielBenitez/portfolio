@@ -1,0 +1,175 @@
+.contenedor-section-principal {
+    background-image: linear-gradient(180deg, #1b1f1f, #066464);
+    margin-top: 6rem;
+    @include tablet {
+        margin-top: 8rem;
+    }
+    .contenedor-principal {
+        padding: 8rem 0;
+        width: 100%;
+        height: 100%;
+        @include grid(1, 3rem);
+        @include tabletXL {
+            @include grid(2, 5rem);
+            height: 70rem;
+            grid-template-columns: 1fr 3fr;
+            width: 95%;
+        }
+        .section-principal-img {
+            order: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include tabletXL { 
+                order: 2;
+                justify-content: flex-end;
+            }
+            .photo-perfil {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                background-color: darken(#0bb6b5, 10);
+                overflow: hidden;
+                height: 25rem;
+                width: 25rem;
+                box-shadow: 0 0 10px 5px #036868;
+                border-radius: 64% 36% 29% 71%/59% 79% 21% 41%;
+                @include tablet { 
+                    height: 31rem;
+                    width: 31rem;
+                }
+                picture {
+                    img {
+                        position: relative;
+                        display: block;
+                        top: 10px;
+                        left: 5px;
+                        height: 28rem;
+                        object-fit: cover;
+                        filter: drop-shadow(10px -5px 10px #000) contrast(110%);
+                        transition: .3s;
+                        &:hover {
+                            transform: scale(1.03);
+                        }
+                        @include tablet { 
+                            height: 36rem;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .section-principal-texto {
+            order: 2;
+            padding: 0 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            @include tabletXL {
+                padding: 0;
+                width: 45rem;
+            }
+            .texto-presentacion {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 80%;
+                @include tabletXL {
+                    align-items: flex-start;
+                    width: 100%;
+                }
+                .saludo {
+                    color: $blanco;
+                    font-size: 1.5rem;
+                    font-weight: 200;
+                    img {
+                        display: inline-block;
+                        width: 2rem;
+                    }
+                    @include tablet {
+                        font-size: 2rem;
+                    }
+                }
+                h1 {
+                    font-weight: 800;
+                    line-height: 1;
+                    margin: 1rem 0;
+                    font-size: 2.5rem;
+                    @include tablet {
+                        font-size: 3.5rem;
+                    }
+                }
+                .descripcion {
+                    text-align: center;
+                    color: $blanco;
+                    font-weight: 500;
+                    font-size: 1.3rem;
+                    font-weight: 200;
+                    @include tablet {
+                        font-size: 1.7rem;
+                    }
+                    @include tabletXL {
+                        text-align: start;
+                        width: 100%;
+                    }
+                    strong {
+                        font-weight: bold;
+                        font-size: 1.5rem;     
+                        @include tablet {
+                            font-size: 2rem;
+                        }
+                    }
+                }
+    
+            }
+    
+        }
+    
+        .contenedor-botones {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            @include tabletXL {
+                align-items: flex-start;
+            }
+            .cv-redes {
+                .boton {
+                    width: 15rem;
+                    font-size: 1.2rem;
+                    border-radius: 1rem;
+                    @include telefono {
+                        width: 13rem;
+                        font-size: 1.3rem;
+                    }
+                    @include tablet {
+                        width: 20rem;
+                        font-size: 1.4rem;
+                    }
+                }
+        
+                .cv {
+                    @include boton(#0E9492);
+                    transition: box-shadow .2s ease-in;
+                    &:hover {
+                        box-shadow: 0 0 .7rem .1rem #0e949262 ;
+                    }
+                }
+            }
+        }
+
+        .redes {
+            display: flex;
+            justify-content: center;
+            margin-top: 1.5rem;
+            li a i{
+                font-size: 1.8rem;
+                @include tablet {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}

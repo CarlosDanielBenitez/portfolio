@@ -1,0 +1,248 @@
+.dark-mode {
+    // HEADER
+    header{
+        background-color: darken(#121212, 3);
+        border-bottom: .1rem solid #501d31;
+        .icono-menu {
+            color: #E84A8A !important;
+        }
+        .logo1 {
+            display: none;
+        }
+        .logo2 {
+            display: block !important;
+        }
+    }
+    .contenedor-nav li a {
+        color: #E84A8A !important;
+        &:hover {
+            color: #e84a89ab !important;
+        }
+        &::after {
+            background: #e84a89ab !important;
+        }
+    }
+
+    .navegacion-mobile {
+        background-color: darken(#121212, 3);
+        border-bottom: .1rem solid #501d31;
+    }
+
+    // PRINCIPAL
+    .contenedor-section-principal {
+        background-image: none;
+        background-image: linear-gradient(180deg, $dark2, $rosa);
+        .contenedor-botones {
+            .cv-redes {
+                .cv {
+                    @include boton(#ed1df150);
+                    &:hover {
+                        box-shadow: 0 0 .7rem .1rem #ed1df150 ;
+                    }
+                }
+                .redes li a i{ 
+                    color: #e84a899a !important;
+                    &:hover {
+                        color: #E84A8A !important;
+                    }
+                }
+            }
+            
+        }
+        .section-principal-img {
+            .photo-perfil {
+                background-color: darken($rosa2, 40);
+                box-shadow: 0 0 10px 5px #850b6a;
+            }
+        }
+    }
+
+    // APTITUDES
+    .contenedor-section-aptitudes {
+        border-top: 2px solid darken($rosa2, 40);
+        border-bottom: 2px solid darken($rosa2, 40);
+        background-color: darken($rosa, 8);
+        .contenedor-icono { 
+            background-color: darken($rosa2, 30);
+        }
+        .aptitud-titulo {
+            color: white;
+        }
+        .aptitud-descripcion {
+            color: rgb(184, 181, 181);
+        }
+    }
+
+    // SOBRE MI
+    .contenedor-section-sobremi { 
+        background-color: $dark2;
+        color: white;
+        .contenedores {
+            background-color: darken($rosa, 8);
+            border: .1rem solid darken($rosa, 5);
+            border-radius: 1rem;
+        }
+        .exp-listas {
+            border-bottom: .1rem solid lighten($rosa, 1);
+            border-radius: 1rem;
+            padding: 0 3rem;
+        }
+
+        .contenedor-imagen-perfil {
+            box-shadow: 0 0 10px 2px #850b6a !important;
+            background-color: darken($rosa2, 40) !important;
+        }
+        .perfil-nombre {
+            p {
+                color: rgb(112, 112, 112);
+            }
+        }
+        .perfil-descripcion {
+            color: rgb(152, 152, 152) !important;
+        }
+        .perfil-contenedor2 { 
+            background-color: darken($rosa, 8) !important;
+        }
+
+        .contenedor-imagen-perfil2 {
+            background-color: darken($rosa2, 40) !important;
+            box-shadow: 0 0 10px 5px #850b6a !important;
+        }
+
+        .perfil-nombre2 { 
+            p {
+                color: rgb(112, 112, 112);
+            }
+        }
+        .proyectos-num {
+            color: white !important;
+            border: 1px solid $rosa2 !important;
+        }
+        .fa-angle-down, .fa-code, .fa-circle-info, .descripcion-titulo h6 {
+            color: $rosa2;
+        }
+        .descripcion-proyectos {
+            background-color: darken($rosa, 6);
+        }
+        .descripcion-li, .descripcion-li2 {
+            &::before, &::after {
+                background-color: $rosa2 !important;
+            }
+            span {
+                color: white !important;
+            }
+            a {
+                color: $rosa3;
+            }
+        }
+        .ver-mas {
+            background-color: darken($rosa2, 20);
+            border: .1rem solid $rosa;
+        }
+
+        .perfil-descripcion {
+            color: white !important;
+            span {
+                color: $rosa3 !important;
+            }
+        }
+
+        .tecnologias-contenedor, .tecnologias-fijado {
+            ul {
+                li {
+                    border: .1rem solid #550257 !important;
+                }
+            }
+        }
+    }
+
+    // CONTACTO
+    .section-contacto { 
+        border-top: 2px solid darken($rosa2, 40);
+        border-bottom: 2px solid darken($rosa2, 40);
+        background-color: darken($rosa, 8);
+        .contenedor-freelance {
+            .freelance {
+                color: white ;
+            }
+        }
+        .descripcion-contacto {
+            color: rgb(184, 181, 181);
+        }
+        .contacto-derecha {
+            h3 {
+                color: $rosa2;
+                span {
+                    color: white ;
+                }
+            }
+            ul {
+                li {
+                    color: $rosa2;
+                    border: .2rem solid $rosa2;
+                    &:hover {
+                        border: .2rem solid $rosa2;
+                    }
+                }
+            }
+        }
+    }
+
+    // RECURSOS
+    .section-recursos { 
+        background-color: $dark2;
+        .contenedor-titulo {
+            p {
+                color: rgb(184, 181, 181);
+            }
+        }
+        h4 {
+            color: $rosa2;
+            &::after {
+                background-color: $rosa2;
+            }
+        }
+        .recursos {
+            a {
+                color: darken($rosa2, 40) !important;
+                &:hover {
+                    text-shadow: darken($rosa2, 50) 2px 2px 5px !important;
+                }
+            }
+            .subtitulos {
+                color: rgb(150, 150, 150);
+            }
+        }
+    }
+
+    // FLECHA 
+    .flecha {
+        background-color: darken($rosa, 10);
+        border: .2rem solid darken($rosa2, 10);
+        i {
+            color: darken($rosa2, 10);
+        }
+    }
+
+    // FOOTER
+    footer {
+        border-top: .1rem solid #501d31;
+        background-color: darken(#121212, 3);
+        .derechos {
+            color: #E84A8A !important;
+        }
+        .logo1 {
+            display: none;
+        }
+        .logo2 {
+            display: block !important;
+        }
+    }
+
+    .redes li a i{ 
+        color: #e84a899a !important;
+        &:hover {
+            color: #E84A8A !important;
+        }
+    }
+}

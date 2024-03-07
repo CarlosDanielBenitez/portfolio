@@ -1,0 +1,164 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: $fuente_principal;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    transition: opacity 0.5s ease-in-out;
+}
+p {
+    color: $negro;
+    font-size: 2rem;
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+    @include tabletXL {
+        max-width: 100rem;
+    }
+}
+
+.bg-custom {
+    background-image: url(/build/img/punto.webp);
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+picture {
+    width: 100%;
+    display: block;
+}
+
+h1, h2, h3 {
+    font-family: $fuente_principal;
+    margin: calc($separacion / 2) 0;
+    font-weight: 300;
+    text-align: center;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 3.4rem;
+}
+h3 {
+    font-size: 3rem;
+}
+h4 {
+    font-size: 2.6rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.gradiente-letras {
+    background-image: linear-gradient(90deg ,#1DF1EF, #EF1DF1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.flecha {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    border: .2rem solid darken($principal, 10);
+    background-color: #094746a4;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all .2s ease-in-out;
+    display: none;
+    &:hover {
+        transform: scale(1.1);
+    }
+    @include tablet {
+        bottom: 2rem;
+        right: 2rem;
+    }
+
+    i {
+        color: darken($principal, 10);
+        font-size: 1.8rem;
+    }
+    
+}
+
+.no-scroll {
+    overflow: hidden;
+    height: 100%; /* Esto evitará que la página sea más alta que la ventana del navegador */
+}
+
+.ocultar {
+    display: none;
+}
+
+/* Esto es para Webkit (Safari y Chrome) */
+::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-track {
+    background: black; /* Color de la pista de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+    background: $principal; /* Color del control deslizante de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: darken($principal, 20) /* Color del control deslizante de la barra de desplazamiento al pasar el ratón por encima */
+}
+
+/* Esto es para Firefox */
+* {
+    scrollbar-width: thin; /* Ancho de la barra de desplazamiento */
+    scrollbar-color: #888 #f1f1f1; /* Color del control deslizante y de la pista de la barra de desplazamiento */
+}
+
+
+// darkmode 
+.dark-mode::-webkit-scrollbar-thumb {
+    background: $rosa2; /* Cambia al color de la barra de desplazamiento deseado en el modo oscuro */
+}
+
+.redes {
+    @include grid(3, 2rem);
+
+    margin: 0;
+    @include tablet {
+        justify-content: end;
+        padding-bottom: 0;
+    }
+    i {
+        font-size: 2rem;
+        color: darken($principal, 15);
+        cursor: pointer;
+        transition: transform 0.5s ease-in-out, scale 0.5s ease-in-out;
+    }
+    i:hover {
+        color: $principal;
+        transform: rotate(360deg) scale(1.2);
+    }
+}

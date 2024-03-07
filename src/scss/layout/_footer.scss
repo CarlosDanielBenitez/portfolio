@@ -1,0 +1,35 @@
+footer {
+    background-color: $secundario;
+    border-top: .1rem solid #0c5e5c;
+    height: 100%;
+    
+   .footer {
+        .contenedor-footer {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 5rem;
+            align-items: center;
+            justify-items: center;
+            text-align: center;
+            .logo {
+                width: 15rem;
+                min-width: 10rem;
+                cursor: pointer;
+                padding: 3rem 0;
+                .logo2 {
+                    display: none;
+                }
+            }
+        }
+        
+        .derechos {
+            color: darken($principal, 30);
+            padding-bottom: 1rem;
+            font-size: 1rem;
+            text-align: center;
+            @include tablet {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}

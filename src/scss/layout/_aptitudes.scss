@@ -1,0 +1,55 @@
+.contenedor-section-aptitudes {
+    background-color: darken($principal, 15);
+    width: 100%;
+
+    .contenedor-aptitudes {
+        padding: 5rem 0;
+        ul {
+            @include grid(1, 4rem);
+            padding: 0 2rem;
+            margin: 0;
+            @include telefono {
+                @include grid(2, 4rem)
+            }
+            @include tabletXL {
+                @include grid(4, 3rem)
+            }
+            @include desktop {
+                @include grid(4, 5rem)
+            }
+        }
+    }
+
+    .aptitud {
+        @include tablet {
+            padding-bottom: 0;
+        }
+    }
+    .contenedor-arriba {
+        display: flex;
+        font-weight: 900;
+        .contenedor-icono {
+            color: $blanco;
+            margin-right: 1rem;
+            border-radius: 1rem;
+            background-color: darken($principal, 25);
+            width: 4rem;
+            height: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+        p {
+            font-weight: 700;
+        }
+    }
+    .aptitud-descripcion {
+        padding-top: 1rem;
+        font-weight: 100;
+        font-size: 1.3rem;
+    }
+}

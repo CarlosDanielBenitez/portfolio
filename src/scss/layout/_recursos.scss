@@ -1,0 +1,74 @@
+.section-recursos {
+    padding: 8rem 0;
+    background-color: darken($blanco, 5);
+    scroll-margin-top: 6rem;
+    @include tabletXL {
+        scroll-margin-top: 8rem;
+    }
+    .contenedor-titulo {
+        padding-bottom: 3rem;
+        h2 {
+            font-weight: 800;
+            line-height: 1;
+            margin: 1rem 0;
+            font-size: 4rem;
+            @include telefono {
+                font-size: 5rem;
+            }
+        }
+        p {
+            color: $secundario;
+            font-size: 1.1rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            @include telefono {
+                font-size: 1.3rem;
+            }
+        }
+    }
+    h4 {
+        font-weight: 900;
+        font-size: 2rem;
+        color: $secundario;
+        @include telefono {
+            font-size: 2.5rem;
+        }
+        &::after {
+            content:'';
+            display: block;
+            width: 6rem;
+            height: .2rem;
+            background-color: $secundario; 
+        }
+    }
+
+    .contenedor-recursos {
+        @include grid (1, 5rem);
+        @include tablet {
+            @include grid (2, 8rem);
+        }
+
+        .recursos {
+            margin: 0 1rem;
+            @include tablet {
+                margin: 0;
+            }
+            .titulo {
+                color: darken($principal, 15);
+                font-size: 1.8rem;
+                font-weight: 700;
+                &:hover {
+                    color: darken($principal, 20);
+                    text-shadow: 2px 2px 5px rgb(187, 187, 187);
+                }
+            }
+            .subtitulos {
+                font-size: 1.1rem;
+                color: $secundario;
+            }
+            .fa-link {
+                opacity: .5;
+            }
+        }
+    }
+}
