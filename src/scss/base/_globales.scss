@@ -155,7 +155,7 @@ ul {
         font-size: 2rem;
         color: darken($principal, 15);
         cursor: pointer;
-        transition: transform 0.5s ease-in-out, scale 0.5s ease-in-out;
+        transition: transform 0.2s ease-in-out, scale 0.5s ease-in-out;
     }
     i:hover {
         color: $principal;

@@ -61,7 +61,7 @@ header {
                         width: 0;
                         height: 1.5px;
                         background: darken($principal, 20);
-                        transition: width .5s;
+                        transition: width .3s;
                     }
                     &:hover::after {
                         width: 50%;
