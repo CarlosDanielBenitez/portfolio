@@ -470,7 +470,7 @@ ul {
   font-size: 2rem;
   color: #0bb6b5;
   cursor: pointer;
-  transition: transform 0.5s ease-in-out, scale 0.5s ease-in-out;
+  transition: transform 0.2s ease-in-out, scale 0.5s ease-in-out;
 }
 .redes i:hover {
   color: #1DF1EF;
@@ -634,7 +634,7 @@ header .header-nav .navegacion-desktop .contenedor-nav a::after {
   width: 0;
   height: 1.5px;
   background: #0a9e9d;
-  transition: width 0.5s;
+  transition: width 0.3s;
 }
 header .header-nav .navegacion-desktop .contenedor-nav a:hover::after {
   width: 50%;
@@ -1284,7 +1284,7 @@ header .header-nav .modos .menu .icono-menu {
   visibility: hidden;
   height: 0;
   overflow: hidden;
-  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out, height 0.5s ease-in-out;
+  transition: opacity 0.2s ease-in-out, visibility 0.5s ease-in-out, height 0.5s ease-in-out;
 }
 .contenedor-section-sobremi .contenedor-sobremi .sobremi-grid .columnas .proyectos-contenedor ul .descripcion-proyectos:not(.ocultar) {
   opacity: 1;
@@ -1446,7 +1446,7 @@ header .header-nav .modos .menu .icono-menu {
   -o-object-fit: cover;
      object-fit: cover;
   opacity: 1;
-  transition: all 0.5s ease;
+  transition: all 0.2s ease;
 }
 .contenedor-section-sobremi .contenedor-sobremi .sobremi-grid .columnas .proyectos-contenedor ul .descripcion-proyectos .proyectos-derecha img:hover {
   cursor: pointer;
@@ -1612,7 +1612,7 @@ header .header-nav .modos .menu .icono-menu {
   color: white;
   font-weight: bold;
   font-size: 18px;
-  transition: 0.6s ease;
+  transition: 0.3s ease;
   border-radius: 0 3px 3px 0;
 }
 
@@ -1737,7 +1737,7 @@ header .header-nav .modos .menu .icono-menu {
   color: #1DF1EF;
   font-size: 1.3rem;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
   border: 0.2rem solid #1DF1EF;
   height: 4rem;
   border-radius: 2rem;
